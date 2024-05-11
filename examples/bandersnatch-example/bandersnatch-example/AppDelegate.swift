@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  verifiable-example
+//  bandersnatch-example
 //
-//  Created by Ruslan Rezin on 10.05.2024.
+//  Created by Ruslan Rezin on 11.05.2024.
 //
 
 import UIKit

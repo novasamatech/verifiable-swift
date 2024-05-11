@@ -1,6 +1,6 @@
 import Foundation
 
-public enum VerifiableApi {
+public enum BandersnatchApi {
     enum ApiError: Error {
         case internalError
         case badResult
@@ -20,11 +20,11 @@ public enum VerifiableApi {
         let result = internalDeriveMemberKey(entropyString).toString()
         
         guard !isError(result) else {
-            throw VerifiableApi.ApiError.internalError
+            throw BandersnatchApi.ApiError.internalError
         }
         
         guard let memberKey = Data(base64Encoded: result) else {
-            throw VerifiableApi.ApiError.badResult
+            throw BandersnatchApi.ApiError.badResult
         }
         
         return memberKey
@@ -50,11 +50,11 @@ public enum VerifiableApi {
         )
         
         guard !isError(result.toString()) else {
-            throw VerifiableApi.ApiError.internalError
+            throw BandersnatchApi.ApiError.internalError
         }
         
         guard let proof = Data(base64Encoded: result.toString()) else {
-            throw VerifiableApi.ApiError.badResult
+            throw BandersnatchApi.ApiError.badResult
         }
         
         return proof

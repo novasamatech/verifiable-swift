@@ -1,24 +1,24 @@
 import XCTest
-import verifiable
+import BandersnatchApi
 
 final class verifiableTests: XCTestCase {
     func testDeriveMemberKey() throws {
-        let memberKey = try VerifiableApi.deriveMemberKey(from: Data(repeating: 0, count: VerifiableApi.entropySize))
-        XCTAssertEqual(memberKey.count, VerifiableApi.memberKeySize)
+        let memberKey = try BandersnatchApi.deriveMemberKey(from: Data(repeating: 0, count: BandersnatchApi.entropySize))
+        XCTAssertEqual(memberKey.count, BandersnatchApi.memberKeySize)
         
         print("Result: \(memberKey.base64EncodedString())")
     }
     
     func testGenerateProof() throws {
         let members = try (0..<100).map {
-            try VerifiableApi.deriveMemberKey(from: Data(repeating: $0, count: VerifiableApi.entropySize))
+            try BandersnatchApi.deriveMemberKey(from: Data(repeating: $0, count: BandersnatchApi.entropySize))
         }
         
-        let firstMemberEntropy = Data(repeating: 0, count: VerifiableApi.entropySize)
+        let firstMemberEntropy = Data(repeating: 0, count: BandersnatchApi.entropySize)
         
         measure {
             do {
-                let proof = try VerifiableApi.createProof(
+                let proof = try BandersnatchApi.createProof(
                     from: firstMemberEntropy,
                     members: members,
                     message: "hello".data(using: .utf8)!,

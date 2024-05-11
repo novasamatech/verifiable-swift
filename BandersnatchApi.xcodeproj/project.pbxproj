@@ -7,95 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C9B21DF2BEE6C5300416318 /* verifiable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9B21D62BEE6C5300416318 /* verifiable.framework */; };
-		0C9B21E42BEE6C5300416318 /* verifiableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B21E32BEE6C5300416318 /* verifiableTests.swift */; };
-		0C9B21F82BEE6D3D00416318 /* verifiable_crypto.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9B21F72BEE6D3D00416318 /* verifiable_crypto.xcframework */; };
-		0C9B21FA2BEE6E1700416318 /* VerifiableApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B21F92BEE6E1700416318 /* VerifiableApi.swift */; };
-		0C9B22072BEE728600416318 /* verifiable-crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B22052BEE728600416318 /* verifiable-crypto.swift */; };
-		0C9B22082BEE728600416318 /* SwiftBridgeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B22062BEE728600416318 /* SwiftBridgeCore.swift */; };
+		0C9B22282BEF33B200416318 /* BandersnatchApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9B221F2BEF33B200416318 /* BandersnatchApi.framework */; };
+		0C9B223B2BEF33FB00416318 /* verifiable-crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B22382BEF33FB00416318 /* verifiable-crypto.swift */; };
+		0C9B223C2BEF33FB00416318 /* BandersnatchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B22392BEF33FB00416318 /* BandersnatchApi.swift */; };
+		0C9B223D2BEF33FB00416318 /* SwiftBridgeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B223A2BEF33FB00416318 /* SwiftBridgeCore.swift */; };
+		0C9B22402BEF340600416318 /* BandersnatchApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9B223F2BEF340600416318 /* BandersnatchApiTests.swift */; };
+		0C9B22422BEF343700416318 /* verifiable_crypto.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9B22412BEF343700416318 /* verifiable_crypto.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0C9B21E02BEE6C5300416318 /* PBXContainerItemProxy */ = {
+		0C9B22292BEF33B200416318 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0C9B21CD2BEE6C5300416318 /* Project object */;
+			containerPortal = 0C9B22162BEF33B200416318 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0C9B21D52BEE6C5300416318;
-			remoteInfo = verifiable;
+			remoteGlobalIDString = 0C9B221E2BEF33B200416318;
+			remoteInfo = BandersnatchApi;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C9B21D62BEE6C5300416318 /* verifiable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = verifiable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C9B21DE2BEE6C5300416318 /* verifiableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = verifiableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C9B21E32BEE6C5300416318 /* verifiableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifiableTests.swift; sourceTree = "<group>"; };
-		0C9B21F72BEE6D3D00416318 /* verifiable_crypto.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = verifiable_crypto.xcframework; path = ../bindings/xcframework/verifiable_crypto.xcframework; sourceTree = "<group>"; };
-		0C9B21F92BEE6E1700416318 /* VerifiableApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifiableApi.swift; sourceTree = "<group>"; };
-		0C9B22052BEE728600416318 /* verifiable-crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "verifiable-crypto.swift"; sourceTree = "<group>"; };
-		0C9B22062BEE728600416318 /* SwiftBridgeCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftBridgeCore.swift; sourceTree = "<group>"; };
+		0C9B221F2BEF33B200416318 /* BandersnatchApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BandersnatchApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9B22272BEF33B200416318 /* BandersnatchApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandersnatchApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9B22382BEF33FB00416318 /* verifiable-crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "verifiable-crypto.swift"; sourceTree = "<group>"; };
+		0C9B22392BEF33FB00416318 /* BandersnatchApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandersnatchApi.swift; sourceTree = "<group>"; };
+		0C9B223A2BEF33FB00416318 /* SwiftBridgeCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftBridgeCore.swift; sourceTree = "<group>"; };
+		0C9B223F2BEF340600416318 /* BandersnatchApiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandersnatchApiTests.swift; sourceTree = "<group>"; };
+		0C9B22412BEF343700416318 /* verifiable_crypto.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = verifiable_crypto.xcframework; path = bindings/xcframework/verifiable_crypto.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0C9B21D32BEE6C5300416318 /* Frameworks */ = {
+		0C9B221C2BEF33B200416318 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9B21F82BEE6D3D00416318 /* verifiable_crypto.xcframework in Frameworks */,
+				0C9B22422BEF343700416318 /* verifiable_crypto.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C9B21DB2BEE6C5300416318 /* Frameworks */ = {
+		0C9B22242BEF33B200416318 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9B21DF2BEE6C5300416318 /* verifiable.framework in Frameworks */,
+				0C9B22282BEF33B200416318 /* BandersnatchApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C9B21CC2BEE6C5300416318 = {
+		0C9B22152BEF33B200416318 = {
 			isa = PBXGroup;
 			children = (
-				0C9B21F72BEE6D3D00416318 /* verifiable_crypto.xcframework */,
-				0C9B21D82BEE6C5300416318 /* verifiable */,
-				0C9B21E22BEE6C5300416318 /* verifiableTests */,
-				0C9B21D72BEE6C5300416318 /* Products */,
+				0C9B22412BEF343700416318 /* verifiable_crypto.xcframework */,
+				0C9B22372BEF33FB00416318 /* Sources */,
+				0C9B223E2BEF340600416318 /* Tests */,
+				0C9B22202BEF33B200416318 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0C9B21D72BEE6C5300416318 /* Products */ = {
+		0C9B22202BEF33B200416318 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C9B21D62BEE6C5300416318 /* verifiable.framework */,
-				0C9B21DE2BEE6C5300416318 /* verifiableTests.xctest */,
+				0C9B221F2BEF33B200416318 /* BandersnatchApi.framework */,
+				0C9B22272BEF33B200416318 /* BandersnatchApiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0C9B21D82BEE6C5300416318 /* verifiable */ = {
+		0C9B22372BEF33FB00416318 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0C9B22062BEE728600416318 /* SwiftBridgeCore.swift */,
-				0C9B22052BEE728600416318 /* verifiable-crypto.swift */,
-				0C9B21F92BEE6E1700416318 /* VerifiableApi.swift */,
+				0C9B22382BEF33FB00416318 /* verifiable-crypto.swift */,
+				0C9B22392BEF33FB00416318 /* BandersnatchApi.swift */,
+				0C9B223A2BEF33FB00416318 /* SwiftBridgeCore.swift */,
 			);
-			path = verifiable;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		0C9B21E22BEE6C5300416318 /* verifiableTests */ = {
+		0C9B223E2BEF340600416318 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0C9B21E32BEE6C5300416318 /* verifiableTests.swift */,
+				0C9B223F2BEF340600416318 /* BandersnatchApiTests.swift */,
 			);
-			path = verifiableTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0C9B21D12BEE6C5300416318 /* Headers */ = {
+		0C9B221A2BEF33B200416318 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -105,62 +105,61 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0C9B21D52BEE6C5300416318 /* verifiable */ = {
+		0C9B221E2BEF33B200416318 /* BandersnatchApi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C9B21E82BEE6C5300416318 /* Build configuration list for PBXNativeTarget "verifiable" */;
+			buildConfigurationList = 0C9B22312BEF33B200416318 /* Build configuration list for PBXNativeTarget "BandersnatchApi" */;
 			buildPhases = (
-				0C9B21D12BEE6C5300416318 /* Headers */,
-				0C9B21D22BEE6C5300416318 /* Sources */,
-				0C9B21D32BEE6C5300416318 /* Frameworks */,
-				0C9B21D42BEE6C5300416318 /* Resources */,
+				0C9B221A2BEF33B200416318 /* Headers */,
+				0C9B221B2BEF33B200416318 /* Sources */,
+				0C9B221C2BEF33B200416318 /* Frameworks */,
+				0C9B221D2BEF33B200416318 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = verifiable;
-			productName = verifiable;
-			productReference = 0C9B21D62BEE6C5300416318 /* verifiable.framework */;
+			name = BandersnatchApi;
+			productName = BandersnatchApi;
+			productReference = 0C9B221F2BEF33B200416318 /* BandersnatchApi.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0C9B21DD2BEE6C5300416318 /* verifiableTests */ = {
+		0C9B22262BEF33B200416318 /* BandersnatchApiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C9B21EB2BEE6C5300416318 /* Build configuration list for PBXNativeTarget "verifiableTests" */;
+			buildConfigurationList = 0C9B22342BEF33B200416318 /* Build configuration list for PBXNativeTarget "BandersnatchApiTests" */;
 			buildPhases = (
-				0C9B21DA2BEE6C5300416318 /* Sources */,
-				0C9B21DB2BEE6C5300416318 /* Frameworks */,
-				0C9B21DC2BEE6C5300416318 /* Resources */,
+				0C9B22232BEF33B200416318 /* Sources */,
+				0C9B22242BEF33B200416318 /* Frameworks */,
+				0C9B22252BEF33B200416318 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0C9B21E12BEE6C5300416318 /* PBXTargetDependency */,
+				0C9B222A2BEF33B200416318 /* PBXTargetDependency */,
 			);
-			name = verifiableTests;
-			productName = verifiableTests;
-			productReference = 0C9B21DE2BEE6C5300416318 /* verifiableTests.xctest */;
+			name = BandersnatchApiTests;
+			productName = BandersnatchApiTests;
+			productReference = 0C9B22272BEF33B200416318 /* BandersnatchApiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0C9B21CD2BEE6C5300416318 /* Project object */ = {
+		0C9B22162BEF33B200416318 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					0C9B21D52BEE6C5300416318 = {
+					0C9B221E2BEF33B200416318 = {
 						CreatedOnToolsVersion = 15.2;
-						LastSwiftMigration = 1520;
 					};
-					0C9B21DD2BEE6C5300416318 = {
+					0C9B22262BEF33B200416318 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
-			buildConfigurationList = 0C9B21D02BEE6C5300416318 /* Build configuration list for PBXProject "verifiable" */;
+			buildConfigurationList = 0C9B22192BEF33B200416318 /* Build configuration list for PBXProject "BandersnatchApi" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -168,26 +167,26 @@
 				en,
 				Base,
 			);
-			mainGroup = 0C9B21CC2BEE6C5300416318;
-			productRefGroup = 0C9B21D72BEE6C5300416318 /* Products */;
+			mainGroup = 0C9B22152BEF33B200416318;
+			productRefGroup = 0C9B22202BEF33B200416318 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C9B21D52BEE6C5300416318 /* verifiable */,
-				0C9B21DD2BEE6C5300416318 /* verifiableTests */,
+				0C9B221E2BEF33B200416318 /* BandersnatchApi */,
+				0C9B22262BEF33B200416318 /* BandersnatchApiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0C9B21D42BEE6C5300416318 /* Resources */ = {
+		0C9B221D2BEF33B200416318 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C9B21DC2BEE6C5300416318 /* Resources */ = {
+		0C9B22252BEF33B200416318 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -197,36 +196,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0C9B21D22BEE6C5300416318 /* Sources */ = {
+		0C9B221B2BEF33B200416318 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9B22082BEE728600416318 /* SwiftBridgeCore.swift in Sources */,
-				0C9B21FA2BEE6E1700416318 /* VerifiableApi.swift in Sources */,
-				0C9B22072BEE728600416318 /* verifiable-crypto.swift in Sources */,
+				0C9B223D2BEF33FB00416318 /* SwiftBridgeCore.swift in Sources */,
+				0C9B223B2BEF33FB00416318 /* verifiable-crypto.swift in Sources */,
+				0C9B223C2BEF33FB00416318 /* BandersnatchApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C9B21DA2BEE6C5300416318 /* Sources */ = {
+		0C9B22232BEF33B200416318 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9B21E42BEE6C5300416318 /* verifiableTests.swift in Sources */,
+				0C9B22402BEF340600416318 /* BandersnatchApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0C9B21E12BEE6C5300416318 /* PBXTargetDependency */ = {
+		0C9B222A2BEF33B200416318 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0C9B21D52BEE6C5300416318 /* verifiable */;
-			targetProxy = 0C9B21E02BEE6C5300416318 /* PBXContainerItemProxy */;
+			target = 0C9B221E2BEF33B200416318 /* BandersnatchApi */;
+			targetProxy = 0C9B22292BEF33B200416318 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0C9B21E62BEE6C5300416318 /* Debug */ = {
+		0C9B222F2BEF33B200416318 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -292,7 +291,7 @@
 			};
 			name = Debug;
 		};
-		0C9B21E72BEE6C5300416318 /* Release */ = {
+		0C9B22302BEF33B200416318 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -351,10 +350,9 @@
 			};
 			name = Release;
 		};
-		0C9B21E92BEE6C5300416318 /* Debug */ = {
+		0C9B22322BEF33B200416318 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -374,20 +372,18 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = org.2e081bb8d008ddf1.verifiable;
+				PRODUCT_BUNDLE_IDENTIFIER = org.2e081bb8d008ddf1.BandersnatchApi;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		0C9B21EA2BEE6C5300416318 /* Release */ = {
+		0C9B22332BEF33B200416318 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -407,7 +403,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = org.2e081bb8d008ddf1.verifiable;
+				PRODUCT_BUNDLE_IDENTIFIER = org.2e081bb8d008ddf1.BandersnatchApi;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -416,7 +412,7 @@
 			};
 			name = Release;
 		};
-		0C9B21EC2BEE6C5300416318 /* Debug */ = {
+		0C9B22352BEF33B200416318 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -425,7 +421,7 @@
 				DEVELOPMENT_TEAM = RD2HBGJZLF;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.2e081bb8d008ddf1.verifiableTests;
+				PRODUCT_BUNDLE_IDENTIFIER = org.2e081bb8d008ddf1.BandersnatchApiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -433,7 +429,7 @@
 			};
 			name = Debug;
 		};
-		0C9B21ED2BEE6C5300416318 /* Release */ = {
+		0C9B22362BEF33B200416318 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -442,7 +438,7 @@
 				DEVELOPMENT_TEAM = RD2HBGJZLF;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.2e081bb8d008ddf1.verifiableTests;
+				PRODUCT_BUNDLE_IDENTIFIER = org.2e081bb8d008ddf1.BandersnatchApiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -453,34 +449,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C9B21D02BEE6C5300416318 /* Build configuration list for PBXProject "verifiable" */ = {
+		0C9B22192BEF33B200416318 /* Build configuration list for PBXProject "BandersnatchApi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C9B21E62BEE6C5300416318 /* Debug */,
-				0C9B21E72BEE6C5300416318 /* Release */,
+				0C9B222F2BEF33B200416318 /* Debug */,
+				0C9B22302BEF33B200416318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C9B21E82BEE6C5300416318 /* Build configuration list for PBXNativeTarget "verifiable" */ = {
+		0C9B22312BEF33B200416318 /* Build configuration list for PBXNativeTarget "BandersnatchApi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C9B21E92BEE6C5300416318 /* Debug */,
-				0C9B21EA2BEE6C5300416318 /* Release */,
+				0C9B22322BEF33B200416318 /* Debug */,
+				0C9B22332BEF33B200416318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C9B21EB2BEE6C5300416318 /* Build configuration list for PBXNativeTarget "verifiableTests" */ = {
+		0C9B22342BEF33B200416318 /* Build configuration list for PBXNativeTarget "BandersnatchApiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C9B21EC2BEE6C5300416318 /* Debug */,
-				0C9B21ED2BEE6C5300416318 /* Release */,
+				0C9B22352BEF33B200416318 /* Debug */,
+				0C9B22362BEF33B200416318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0C9B21CD2BEE6C5300416318 /* Project object */;
+	rootObject = 0C9B22162BEF33B200416318 /* Project object */;
 }

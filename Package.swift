@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "verifiable",
+    name: "BandersnatchApi",
     products: [
         .library(
-            name: "verifiable",
-            targets: ["verifiable"]
+            name: "BandersnatchApi",
+            targets: ["BandersnatchApi"]
         ),
     ],
     targets: [
@@ -15,9 +15,9 @@ let package = Package(
             path: "./bindings/xcframework/verifiable_crypto.xcframework"
         ),
         .target(
-            name: "verifiable",
+            name: "BandersnatchApi",
             dependencies: ["verifiable-crypto"],
-            path: "./verifiable/verifiable"
+            path: "Sources"
         ),
     ]
 )
