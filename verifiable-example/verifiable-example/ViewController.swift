@@ -17,18 +17,20 @@ class ViewController: UIViewController {
             
             let firstMemberEntropy = Data(repeating: 0, count: VerifiableApi.entropySize)
             
-            print("Start: \(Date())")
+            let start = Date().timeIntervalSince1970
             
             let proof = try VerifiableApi.createProof(
                 from: firstMemberEntropy,
                 members: members,
-                message: "hello",
-                context: "pop:polkadot.network/mob-rule   "
+                message: "hello".data(using: .utf8)!,
+                context: "pop:polkadot.network/mob-rule   ".data(using: .utf8)!
             )
             
-            print("Data: \(proof.base64EncodedString())")
+            print("Proof: \(proof.base64EncodedString())")
             
-            print("Stop: \(Date())")
+            let stop = Date().timeIntervalSince1970
+            
+            print("Time: \(stop - start)s")
         } catch {
             
         }

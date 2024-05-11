@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		0C9B21C02BEE6C1000416318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B21BE2BEE6C1000416318 /* Main.storyboard */; };
 		0C9B21C22BEE6C1100416318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B21C12BEE6C1100416318 /* Assets.xcassets */; };
 		0C9B21C52BEE6C1100416318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9B21C32BEE6C1100416318 /* LaunchScreen.storyboard */; };
+		0C9B22142BEF305900416318 /* verifiable in Frameworks */ = {isa = PBXBuildFile; productRef = 0C9B22132BEF305900416318 /* verifiable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9B22142BEF305900416318 /* verifiable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "verifiable-example";
+			packageProductDependencies = (
+				0C9B22132BEF305900416318 /* verifiable */,
+			);
 			productName = "verifiable-example";
 			productReference = 0C9B21B52BEE6C1000416318 /* verifiable-example.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 0C9B21AC2BEE6C1000416318;
+			packageReferences = (
+				0C9B22122BEF305900416318 /* XCLocalSwiftPackageReference ".." */,
+			);
 			productRefGroup = 0C9B21B62BEE6C1000416318 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,6 +371,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		0C9B22122BEF305900416318 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C9B22132BEF305900416318 /* verifiable */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = verifiable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0C9B21AD2BEE6C1000416318 /* Project object */;
 }
