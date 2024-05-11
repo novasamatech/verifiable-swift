@@ -1,0 +1,17 @@
+[package]
+ edition = '2021'
+ name = "verifiable-crypto"
+ version = "0.1.0"
+
+ build = "build.rs"
+
+[lib]
+ crate-type = ["staticlib", "cdylib"]
+
+[build-dependencies]
+ swift-bridge-build = "0.1"
+
+[dependencies]
+ verifiable = { git = "https://github.com/paritytech/verifiable", branch = "george/split-public-key", default-features = false, features = ["small-ring", "std"]}
+ base64 = "0.22.1"
+ swift-bridge = "0.1"

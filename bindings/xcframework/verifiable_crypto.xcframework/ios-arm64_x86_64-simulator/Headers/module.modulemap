@@ -1,0 +1,5 @@
+module verifiable_crypto {
+    header "SwiftBridgeCore.h"
+    header "verifiable-crypto.h"
+    export *
+}
