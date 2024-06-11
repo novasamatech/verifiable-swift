@@ -59,4 +59,21 @@ public enum BandersnatchApi {
         
         return proof
     }
+
+    public static func sign(entropy: Data, message: Data) throws -> Data {
+        let result = internalSign(
+            entropy.base64EncodedString().intoRustString(),
+            message.base64EncodedString().intoRustString()
+        )
+
+        guard !isError(result.toString()) else {
+            throw BandersnatchApi.ApiError.internalError
+        }
+
+        guard let signedMessage = Data(base64Encoded: result.toString()) else {
+            throw BandersnatchApi.ApiError.badResult
+        }
+
+        return signedMessage
+    }
 }

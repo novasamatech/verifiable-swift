@@ -31,4 +31,17 @@ final class verifiableTests: XCTestCase {
             }
         }
     }
+
+    func testSignMessage() {
+        do {
+            let entropy = Data(repeating: 0, count: BandersnatchApi.entropySize)
+            let message = "hello".data(using: .utf8)!
+            let result = try BandersnatchApi.sign(entropy: entropy, message: message)
+
+            print("Signed message: \(result.base64EncodedString())")
+        } catch {
+            XCTFail("Signing message error: \(error)")
+        }
+    }
+
 }
