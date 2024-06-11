@@ -13,6 +13,9 @@ mod ffi {
 
         #[swift_bridge(swift_name = "create_proof")]
         fn create_proof(entropy: String, members: Vec<String>, context: String, message: String) -> String;
+
+        #[swift_bridge(swift_name = "sign")]
+        fn sign(entropy: String, message: String) -> String;
     }
 }
 
@@ -68,6 +71,28 @@ fn create_proof(entropy: String, members: Vec<String>, context: String, message:
     .unwrap();
 
     STANDARD.encode(proof)
+}
+
+#[no_mangle]
+fn sign(entropy: String, message: String) -> String {
+    let entropy_slice = match decode_entropy(&entropy) {
+        Ok(slice) => slice,
+        Err(err) => return err,
+    };
+
+    let secret = BandersnatchVrfVerifiable::new_secret(entropy_slice);
+
+    let message_slice = match decode_slice(&message) {
+        Ok(slice) => slice,
+        Err(err) => return err,
+    };
+
+    let signature = match BandersnatchVrfVerifiable::sign(&secret, &message_slice) {
+        Ok(sig) => sig,
+        Err(_) => return error(),
+    };
+
+    STANDARD.encode(signature)
 }
 
 fn decode_members(members: Vec<String>) -> Result<Vec<EncodedPublicKey>, String> {
