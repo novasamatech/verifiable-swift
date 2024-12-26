@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BandersnatchApi"
-  s.version      = "0.1.1"
+  s.version      = "0.2.0"
   s.summary      = "Swift wrapper for the bandersnatch vrf crypto"
   s.homepage     = "https://github.com/novasamatech/verifiable-swift"
   s.license      = 'MIT'
