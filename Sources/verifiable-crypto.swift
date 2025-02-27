@@ -22,6 +22,15 @@ func internalSign<GenericIntoRustString: IntoRustString>(_ entropy: GenericIntoR
     )
 }
 
+func internalDeriveAlias<GenericIntoRustString: IntoRustString>(_ entropy: GenericIntoRustString, _ context: GenericIntoRustString) -> RustString {
+    RustString(
+        ptr: __swift_bridge__$derive_alias(
+            prepareRustString(entropy),
+            prepareRustString(context)
+        )
+    )
+}
+
 private func prepareRustString<GenericIntoRustString: IntoRustString>(_ value: GenericIntoRustString) -> UnsafeMutablePointer<CChar> {
     let rustString = value.intoRustString()
     rustString.isOwned = false

@@ -44,4 +44,16 @@ final class verifiableTests: XCTestCase {
         }
     }
 
+    func testDeriveAlias() {
+        do {
+            let entropy = Data(repeating: 0, count: BandersnatchApi.entropySize)
+            let context = "pop:polkadot.network/priv-vouchr".data(using: .utf8)!
+            let result = try BandersnatchApi.deriveAlias(fromEntropy: entropy, context: context)
+
+            print("Alias: \(result.base64EncodedString())")
+        } catch {
+            XCTFail("Derive alias error: \(error)")
+        }
+    }
+
 }
