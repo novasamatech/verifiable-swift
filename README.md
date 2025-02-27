@@ -23,7 +23,7 @@ dependencies: [
 First, add pod to the ```Podfile```:
 
 ```
-pod BandersnatchApi, :git => 'https://github.com/novasamatech/verifiable-swift.git', :tag => '0.3.0'
+pod 'BandersnatchApi', :git => 'https://github.com/novasamatech/verifiable-swift.git', :tag => '0.3.0'
 ```
 
 Then run:
