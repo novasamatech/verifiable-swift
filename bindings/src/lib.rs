@@ -16,6 +16,9 @@ mod ffi {
 
         #[swift_bridge(swift_name = "sign")]
         fn sign(entropy: String, message: String) -> String;
+
+        #[swift_bridge(swift_name = "derive_alias")]
+        fn derive_alias(entropy: String, context: String) -> String;
     }
 }
 
@@ -93,6 +96,29 @@ fn sign(entropy: String, message: String) -> String {
     };
 
     STANDARD.encode(signature)
+}
+
+#[no_mangle]
+fn derive_alias(entropy: String, context: String) -> String {
+    let entropy_slice = match decode_entropy(&entropy) {
+        Ok(slice) => slice,
+        Err(err) => return err,
+    };
+
+    let secret = BandersnatchVrfVerifiable::new_secret(entropy_slice);
+
+    let context_slice = match decode_slice(&context) {
+        Ok(slice) => slice,
+        Err(err) => return err,
+    };
+
+    let alias = BandersnatchVrfVerifiable::alias_in_context(
+        &secret,
+        &context_slice
+    )
+    .unwrap();
+
+    STANDARD.encode(alias)
 }
 
 fn decode_members(members: Vec<String>) -> Result<Vec<EncodedPublicKey>, String> {

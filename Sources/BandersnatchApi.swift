@@ -76,4 +76,24 @@ public enum BandersnatchApi {
 
         return signedMessage
     }
+
+    public static func deriveAlias(fromEntropy entropy: Data, context: Data) throws -> Data {
+        let entropyString = entropy.base64EncodedString()
+        let contextString  = context.base64EncodedString()
+
+        let result = internalDeriveAlias(
+            entropyString.intoRustString(),
+            contextString.intoRustString()
+        ).toString()
+
+        guard !isError(result) else {
+            throw BandersnatchApi.ApiError.internalError
+        }
+
+        guard let alias = Data(base64Encoded: result) else {
+            throw BandersnatchApi.ApiError.badResult
+        }
+
+        return alias
+    }
 }
