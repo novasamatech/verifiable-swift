@@ -14,7 +14,7 @@ Once you have Swift Package Manager setup add package to the dependencies in the
 
 ```
 dependencies: [
-    .package(url: "https://github.com/novasamatech/verifiable-swift.git", from: "0.2.0")
+    .package(url: "https://github.com/novasamatech/verifiable-swift.git", from: "0.3.0")
 ]
 ```
 
@@ -23,7 +23,7 @@ dependencies: [
 First, add pod to the ```Podfile```:
 
 ```
-pod BandersnatchApi, :git => 'https://github.com/novasamatech/verifiable-swift.git', :tag => '0.2.0'
+pod BandersnatchApi, :git => 'https://github.com/novasamatech/verifiable-swift.git', :tag => '0.3.0'
 ```
 
 Then run:
