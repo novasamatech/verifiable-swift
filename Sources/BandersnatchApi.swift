@@ -11,7 +11,7 @@ public enum BandersnatchApi {
         result == "-1"
     }
     
-    public static let memberKeySize = 33
+    public static let memberKeySize = 32
     public static let entropySize = 32
     
     public static func deriveMemberKey(from entropy: Data) throws -> Data {

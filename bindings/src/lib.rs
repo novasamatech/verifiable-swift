@@ -133,11 +133,11 @@ fn decode_members(members: Vec<String>) -> Result<Vec<EncodedPublicKey>, String>
     members.into_iter().map(|base64_string| {
         let bytes = decode_slice(&base64_string)?;
         
-        if bytes.len() != 33 {
+        if bytes.len() != 32 {
             return Err(error());
         }
 
-        let slice: [u8; 33] = bytes
+        let slice: [u8; 32] = bytes
             .try_into()
             .map_err(|_| error())?;
         
