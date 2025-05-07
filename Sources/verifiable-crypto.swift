@@ -31,6 +31,10 @@ func internalDeriveAlias<GenericIntoRustString: IntoRustString>(_ entropy: Gener
     )
 }
 
+func internalGetEntropyLength() -> Int { Int(__swift_bridge__$get_entropy_length()) }
+
+func internalGetMemberKeyLength() -> Int { Int(__swift_bridge__$get_member_key_length()) }
+
 private func prepareRustString<GenericIntoRustString: IntoRustString>(_ value: GenericIntoRustString) -> UnsafeMutablePointer<CChar> {
     let rustString = value.intoRustString()
     rustString.isOwned = false

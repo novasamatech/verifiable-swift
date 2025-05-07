@@ -19,8 +19,17 @@ mod ffi {
 
         #[swift_bridge(swift_name = "derive_alias")]
         fn derive_alias(entropy: String, context: String) -> String;
+
+        #[swift_bridge(swift_name = "get_entropy_length")]
+        fn get_entropy_length() -> usize;
+
+        #[swift_bridge(swift_name = "get_entropy_length")]
+        fn get_member_key_length() -> usize;
     }
 }
+
+const ENTROPY_LENGTH: usize = 32;
+const MEMBER_KEY_LENGTH: usize = 32;
 
 fn error() -> String {
     "-1".to_string()
@@ -129,15 +138,25 @@ fn derive_alias(entropy: String, context: String) -> String {
     STANDARD.encode(alias)
 }
 
+#[no_mangle]
+fn get_entropy_length() -> usize {
+    ENTROPY_LENGTH
+}
+
+#[no_mangle]
+fn get_member_key_length() -> usize {
+    MEMBER_KEY_LENGTH
+}
+
 fn decode_members(members: Vec<String>) -> Result<Vec<EncodedPublicKey>, String> {
     members.into_iter().map(|base64_string| {
         let bytes = decode_slice(&base64_string)?;
         
-        if bytes.len() != 33 {
+        if bytes.len() != MEMBER_KEY_LENGTH {
             return Err(error());
         }
 
-        let slice: [u8; 33] = bytes
+        let slice: [u8; MEMBER_KEY_LENGTH] = bytes
             .try_into()
             .map_err(|_| error())?;
         
@@ -149,14 +168,14 @@ fn decode_slice(base64_string: &str) -> Result<Vec<u8>, String> {
     STANDARD.decode(base64_string).map_err(|_| error())
 }
 
-fn decode_entropy(entropy: &str) -> Result<[u8; 32], String> {
+fn decode_entropy(entropy: &str) -> Result<[u8; ENTROPY_LENGTH], String> {
     let entropy_bytes = STANDARD.decode(entropy).map_err(|_| error())?;
 
-    if entropy_bytes.len() != 32 {
+    if entropy_bytes.len() != ENTROPY_LENGTH {
         return Err(error());
     }
 
-    let entropy_slice: [u8; 32] = entropy_bytes
+    let entropy_slice: [u8; ENTROPY_LENGTH] = entropy_bytes
         .try_into()
         .map_err(|_| error())?;
 

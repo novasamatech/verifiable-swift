@@ -4,5 +4,7 @@ void* __swift_bridge__$derive_member_key(void* entropy);
 void* __swift_bridge__$create_proof(void* entropy, void* members, void* context, void* message);
 void* __swift_bridge__$sign(void* entropy, void* message);
 void* __swift_bridge__$derive_alias(void* entropy, void* context);
+uintptr_t __swift_bridge__$get_entropy_length(void);
+uintptr_t __swift_bridge__$get_member_key_length(void);
 
 
