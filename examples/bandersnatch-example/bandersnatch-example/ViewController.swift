@@ -23,7 +23,8 @@ class ViewController: UIViewController {
                     from: firstMemberEntropy,
                     members: members,
                     message: "hello".data(using: .utf8)!,
-                    context: "pop:polkadot.network/mob-rule   ".data(using: .utf8)!
+                    context: "pop:polkadot.network/mob-rule   ".data(using: .utf8)!,
+                    domainSize: .domain11
                 )
                 
                 print("Proof: \(proof.base64EncodedString())")
