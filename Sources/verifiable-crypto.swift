@@ -4,12 +4,13 @@ func internalDeriveMemberKey<GenericIntoRustString: IntoRustString>(_ entropy: G
     RustString(ptr: __swift_bridge__$derive_member_key(prepareRustString(entropy)))
 }
 
-func internalCreateProof<GenericIntoRustString: IntoRustString>(_ entropy: GenericIntoRustString, _ members: RustVec<GenericIntoRustString>, _ context: GenericIntoRustString, _ message: GenericIntoRustString) -> RustString {
+func internalCreateProof<GenericIntoRustString: IntoRustString>(_ entropy: GenericIntoRustString, _ members: RustVec<GenericIntoRustString>, _ context: GenericIntoRustString, _ message: GenericIntoRustString, _ domain_size: UInt32) -> RustString {
     RustString(ptr: __swift_bridge__$create_proof(
         prepareRustString(entropy),
         { let val = members; val.isOwned = false; return val.ptr }(),
         prepareRustString(context),
-        prepareRustString(message)
+        prepareRustString(message),
+        domain_size
     ))
 }
 

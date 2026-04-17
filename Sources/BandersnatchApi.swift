@@ -6,6 +6,12 @@ public enum BandersnatchApi {
         case badResult
         case badInput
     }
+
+    public enum RingDomainSize: UInt32 {
+        case domain11 = 11
+        case domain12 = 12
+        case domain16 = 16
+    }
     
     static func isError(_ result: String) -> Bool {
         result == "-1"
@@ -34,19 +40,21 @@ public enum BandersnatchApi {
         from entropy: Data,
         members: [Data],
         message: Data,
-        context: Data
+        context: Data,
+        domainSize: RingDomainSize
     ) throws -> Data {
         let membersBase64 = RustVec<RustString>()
-        
+
         for member in members {
             membersBase64.push(value: member.base64EncodedString().intoRustString())
         }
-        
+
         let result = internalCreateProof(
             entropy.base64EncodedString().intoRustString(),
             membersBase64,
             context.base64EncodedString().intoRustString(),
-            message.base64EncodedString().intoRustString()
+            message.base64EncodedString().intoRustString(),
+            domainSize.rawValue
         )
         
         guard !isError(result.toString()) else {

@@ -12,6 +12,6 @@
  swift-bridge-build = "0.1"
 
 [dependencies]
- verifiable = { git = "https://github.com/paritytech/verifiable", rev = "85998f1", default-features = false, features = ["small-ring", "std"]}
+ verifiable = { git = "https://github.com/paritytech/verifiable", rev = "667b1ab", default-features = false, features = ["std"]}
  base64 = "0.22.1"
  swift-bridge = "0.1"
