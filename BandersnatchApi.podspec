@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "0.4.0"
   s.summary      = "Swift wrapper for the bandersnatch vrf crypto"
   s.homepage     = "https://github.com/novasamatech/verifiable-swift"
-  s.license      = 'MIT'
+  s.license      = { :type => 'Apache-2.0', :file => 'LICENSE' }
   s.author       = {'Ruslan Rezin' => 'ruslan@novasama.io'}
   s.source       = { :git => 'https://github.com/novasamatech/verifiable-swift',  :tag => "#{s.version}"}
 
